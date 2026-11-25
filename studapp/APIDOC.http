@@ -1,0 +1,59 @@
+###
+POST http://127.0.0.1:8000/register/
+Content-Type: application/json
+
+{
+    "username":"priyan2",
+    "email":"priyan@gmail.com",
+    "password":"priyan07"
+}
+
+###
+POST http://127.0.0.1:8000/login/
+Content-Type: application/json
+
+{
+    "username":"priyan",
+    "password":"priyan07"
+}
+
+###
+GET http://127.0.0.1:8000/students/
+Accept: application/json
+Authorization: Token 4078107086f8727dd2e813f9f9ab1ffa0a1e9164
+
+###
+POST http://127.0.0.1:8000/students/
+Content-Type: application/json
+Authorization: Token 4078107086f8727dd2e813f9f9ab1ffa0a1e9164
+
+{
+    "name":"abin",
+    "roll_number":7,
+    "course":"python",
+    "age":21,
+    "place":"calicut"
+}
+
+###
+GET http://127.0.0.1:8000/studentrud/1/
+Accept: application/json
+Authorization: Token 4078107086f8727dd2e813f9f9ab1ffa0a1e9164
+
+###
+PUT  http://127.0.0.1:8000/studentrud/1/
+Content-Type: application/json
+Authorization: Token 4078107086f8727dd2e813f9f9ab1ffa0a1e9164
+
+{
+    "name":"amar",
+    "roll_number":5,
+    "course":"python",
+    "age":22,
+    "place":"malapuram"
+}
+
+###
+DELETE http://127.0.0.1:8000/studentrud/2/
+Content-Type: application/json
+Authorization: Token 4078107086f8727dd2e813f9f9ab1ffa0a1e9164
